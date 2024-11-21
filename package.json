@@ -1,0 +1,13 @@
+{
+  "name": "localgenie",
+  "version": "1.0.0",
+  "description": "Google Places API test setup for LocalGenie",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "axios": "^1.3.0"
+  }
+}
