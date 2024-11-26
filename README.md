@@ -9,7 +9,6 @@
 2. **🤖 ChatGPT-Powered Assistant**: Chat with an AI assistant powered by **OpenAI**, providing intelligent responses based on general knowledge and real-time information.
 3. **📡 Live Updates**: Stay informed with the latest data pulled directly from trusted APIs, including weather forecasts, traffic reports, and news.
 4. **✨ Personalized Recommendations**: Receive personalized suggestions for services, events, or places based on your preferences, powered by real-time data.
-5. **🎨 AI-Powered Image Generation**: Generate custom images from text descriptions using the **Text-to-Image API** for creative and visual tasks.
 
 ---
 
@@ -18,7 +17,6 @@
     - HTML5, CSS3, and JavaScript for building a responsive and intuitive user interface.
 - **APIs**:
     - **OpenAI API (ChatGPT)**: For conversational AI that helps you interact with the assistant and get dynamic responses.
-    - **Text-to-Image API**: For generating images based on text descriptions.
 
 - **Deployment**:
     - Hosted on scalable web servers for optimal performance and reliability.
