@@ -4,52 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Assistant</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-        }
-        .form-container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        select, input[type="text"], button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="robot-bg"></div>
 <h1>AI Assistant</h1>
-
 <div class="form-container">
     <form id="aiForm">
         <label for="action">What would you like to do?</label>
@@ -62,46 +21,22 @@
         <input type="text" id="userInput" name="userInput" placeholder="Type here..." required>
 
         <button type="submit">Submit</button>
+
+        <!-- Loading Bar -->
+        <div id="loadingBarContainer" class="loading-bar-container" style="display: none;">
+            <div id="loadingBar" class="loading-bar"></div>
+        </div>
+
         <div id="responseContainer">
             <p id="responseText"></p>
         </div>
     </form>
 </div>
-
-
-
+<script src="script.js"></script>
 <script src="app.js"></script>
-<script>
-    document.getElementById('aiForm').addEventListener('submit', async function(event) {
-        event.preventDefault();
 
-        const userInput = document.getElementById('userInput').value;
-        const action = document.getElementById('action').value;
 
-        if (action && userInput) {
-            try {
-                // Call your API request function
-                const result = await fetch('/api/send-request', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ userInput })
-                });
 
-                const response = await result.json();
-                if (response && response.result) {
-                    document.getElementById('responseText').textContent = response.result;
-                } else {
-                    document.getElementById('responseText').textContent = "Sorry, there was an issue processing your request.";
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('responseText').textContent = "An error occurred while fetching the response..... index.html ";
-            }
-        } else {
-            document.getElementById('responseText').textContent = "Please select an action and enter a query";
-        }
-    });
-</script>
 
 </body>
 </html>

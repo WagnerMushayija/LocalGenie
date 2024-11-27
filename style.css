@@ -1,0 +1,120 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #1a1a1a; /* Dark grey background */
+    color: #e6e6e6; /* Light grey text for readability */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Robot Background */
+.robot-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-image: url('robot.gif'); /* Replace with your robot gif's URL */
+    background-size: cover;
+    opacity: 0.3; /* Subtle transparency */
+    z-index: -1; /* Ensure it stays in the background */
+}
+
+/* Form Container */
+h1 {
+    text-align: center;
+    color: #ff4d4d; /* Vibrant red */
+}
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #2e2e2e; /* Slightly lighter grey */
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ff4d4d; /* Red for labels */
+}
+select, input[type="text"], button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #1a1a1a; /* Matching dark grey */
+    color: #e6e6e6; /* Light grey text */
+}
+button {
+    background-color: #ff4d4d;
+    color: #1a1a1a; /* Dark grey text on red button */
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Loading Bar */
+.loading-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #444;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background-color: #ff4d4d;
+    animation: loadingAnimation 3s infinite;
+}
+
+@keyframes loadingAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+/* Input Styling */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #2e2e2e; /* Match with form background */
+    color: #e6e6e6; /* Light grey text */
+    font-size: 1rem; /* Consistent text size */
+    box-sizing: border-box; /* Prevent overflow issues */
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Input Focus State */
+input[type="text"]:focus {
+    background-color: #1a1a1a; /* Darker background on focus */
+    border: 1px solid #ff4d4d; /* Highlight with red border */
+    outline: none; /* Remove default outline */
+}
+
+/* Fix input and form alignment */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #2e2e2e; /* Slightly lighter grey */
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; /* Align everything properly */
+}
