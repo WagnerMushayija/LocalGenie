@@ -1,6 +1,6 @@
 // app.js
-import fetch from 'node-fetch';
-import dotenv from 'dotenv';
+const fetch = require('node-fetch');
+const dotenv = require('dotenv');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -9,7 +9,7 @@ const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
 const API_URL = 'https://chatgpt-42.p.rapidapi.com/gpt4';
 
 // Send data to the API
-export async function sendRequestToApi(userInput) {
+async function sendRequestToApi(userInput) {
     const data = JSON.stringify({
         messages: [
             {
@@ -38,3 +38,4 @@ export async function sendRequestToApi(userInput) {
         throw new Error('An error occurred while fetching the response.... app.js');
     }
 }
+module.exports = { sendRequestToApi };

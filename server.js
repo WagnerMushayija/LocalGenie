@@ -1,8 +1,9 @@
 // server.js
-import express from 'express';
-import path from 'path';
-import bodyParser from 'body-parser';
-import { sendRequestToApi } from './app.js';
+
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');  // Use `require` for body-parser
+const { sendRequestToApi } = require('./app.js');
 
 const app = express();
 const port = 3000;
@@ -30,6 +31,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(path.resolve(), 'public', 'index.html'));
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Server running on http://localhost:${port}`);
 });
