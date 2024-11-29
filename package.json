@@ -1,7 +1,7 @@
 {
   "name": "localgenie",
   "version": "1.0.0",
-  "description": "Google Places API test setup for LocalGenie",
+  "description": "Ai Assistant LocalGenie",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

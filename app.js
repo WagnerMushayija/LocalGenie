@@ -17,7 +17,7 @@ export async function sendRequestToApi(userInput) {
                 content: userInput
             }
         ],
-        web_access: false
+        web_access: true
     });
 
     try {
